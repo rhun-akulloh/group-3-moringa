@@ -1,0 +1,89 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color:black;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    margin: 0;
+    background: url("https://media1.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3cDd0M3NxenVnODdkemx6c3p4OHZseDFkcHVpanZyejZpcmVwY2JydiZlcD12MV9naWZzX3JlbGF0ZWQmY3Q9Zw/3oEjHB1EKuujDjYFWw/giphy.webp");
+    background-size: cover;
+}
+h1 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: red;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+.profiles {
+    list-style: none;     
+    padding: 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 40px;             
+    flex-wrap: wrap;       
+}
+
+.profiles li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.profiles li img {
+    width: 100px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    border: 4px solid transparent;
+    transition: border 0.3s;
+}
+.profiles li span {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 1rem;
+}
+.profiles li:hover img {
+    transform: scale(1.2);
+    border-color: red;   
+    box-shadow: 0 0 20px red;
+}
+.continue-btn {
+    margin-top: 50px;
+    padding: 15px 50px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color:white;
+    background-color: red;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+.continue-btn:hover {
+    background-color: red;
+    transform: scale(1.05);
+}
+
+@media screen and (max-width: 600px) {
+    .profiles {
+        gap: 20px;
+    }
+
+    .profiles li img {
+        width: 100px;
+        height: 100px;
+    }
+
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+
+    .continue-btn {
+        padding: 12px 35px;
+        font-size: 1rem;
+    }
+}
